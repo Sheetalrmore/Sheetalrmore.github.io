@@ -1,51 +1,25 @@
-// Open modal with dynamic content
-function openModal(id) {
-  const modal = document.getElementById("modal");
-  const title = document.getElementById("modal-title");
-  const image = document.getElementById("modal-image");
-  const description = document.getElementById("modal-description");
-  const video = document.getElementById("modal-video");
+// Smooth scroll for nav links
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
 
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden"; // prevent background scroll
+// Scroll reveal animation
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+revealElements.forEach(el => observer.observe(el));
 
-  // Reset video
-  video.style.display = "none";
-  video.pause();
-
-  // Load content based on ID
-  if (id === "grad") {
-    title.textContent = "Grad Planner";
-    image.src = "grad-planner.jpg";
-    description.textContent = "Automated course planning for universities using ML and Tableau.";
-  } else if (id === "vr") {
-    title.textContent = "VR Compliance Training";
-    image.src = "vr-training.jpg";
-    description.textContent = "Improved training effectiveness through usability testing.";
-  } else if (id === "case1") {
-    title.textContent = "Case Study Title";
-    image.src = "case1.jpg";
-    description.textContent = "Placeholder for case study details.";
-  }
-}
-
-// Close modal
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-  document.body.style.overflow = "auto";
-}
-
-// Close modal on outside click
-window.onclick = function(event) {
-  const modal = document.getElementById("modal");
-  if (event.target === modal) {
-    closeModal();
-  }
-};
-
-// Close modal on Escape key
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    closeModal();
-  }
+// Contact form feedback
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Message sent! I’ll get back to you soon.');
 });

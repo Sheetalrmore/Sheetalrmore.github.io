@@ -4,119 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheetal | Program Manager Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header-section">
-    <div class="header-container">
-      <div class="header-text">
-        <h1>Sheetal</h1>
-        <p>Building programs that scale, empower, and transform.</p>
+<header>
+  <div class="container">
+    <h1>Sheetal</h1>
+    <p class="tagline">Building programs that scale, empower, and transform.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section id="hero" class="reveal">
+  <div class="container">
+    <h2>I specialise in managing cross-functional programs that drive operational efficiency and deliver strategic outcomes.</h2>
+    <p>My goal is to enable organisations to achieve measurable impact by delivering well-structured programs that align with business objectives, foster collaboration, and optimise resources.</p>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="container">
+    <h2>Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Strategy</h3>
+        <p>Roadmapping, A/B Testing, Project Planning</p>
       </div>
-      <div class="header-image">
-        <img src="your-image.jpg" alt="Sheetal's Photo" />
+      <div class="skill-card">
+        <h3>Design</h3>
+        <p>User Flows, Wireframes, Persona Writing</p>
+        <p>Tools- Figma</p>
       </div>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#case-studies">Case Studies</a></li>
-      <li><a href="#resume">Resume</a></li>
-    </ul>
-  </nav>
-
-  <!-- About -->
-  <section id="about" class="about-section">
-    <h2>About</h2>
-    <p>I specialise in managing cross-functional programs that drive operational efficiency and deliver strategic outcomes...</p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <ul>
-      <li>Strategy: Roadmapping, A/B Testing</li>
-      <li>Design: User Flows, Wireframes</li>
-      <li>Tools: Figma, Jira, Confluence</li>
-      <li>Analytics: Google Analytics, Lighthouse</li>
-    </ul>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="projects-section">
-    <h2>Professional Projects</h2>
-    <div class="card-container">
-      <div class="card" onclick="openModal('grad')">
-        <img src="grad-planner.jpg" alt="Grad Planner" />
-        <h3>Grad Planner</h3>
-        <p>Role: Product Lead</p>
-        <p>Tools: Python, ML, Tableau</p>
-        <p>Impact: Automated course planning</p>
-        <p>Published: April 2021</p>
+      <div class="skill-card">
+        <h3>Content Management System</h3>
+        <p>AEM, DAM</p>
       </div>
-      <div class="card" onclick="openModal('vr')">
-        <img src="vr-training.jpg" alt="VR Training" />
-        <h3>VR Compliance Training</h3>
-        <p>Role: UX Strategist</p>
-        <p>Tools: Figma, SurveyMonkey</p>
-        <p>Impact: Improved training effectiveness</p>
-        <p>Published: April 2021</p>
+      <div class="skill-card">
+        <h3>Workflow Management</h3>
+        <p>Azure DevOps, Jira, Confluence, Trello </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Case Studies -->
-  <section id="case-studies" class="case-studies-section">
-    <h2>Case Studies</h2>
-    <div class="card-container">
-      <div class="card" onclick="openModal('case1')">
-        <img src="case1.jpg" alt="Case Study 1" />
-        <h3>Case Study Title</h3>
-        <p>Role: Program Manager</p>
-        <p>Tools: Figma, Jira</p>
-        <p>Impact: Improved delivery timelines</p>
-        <p>Published: Jan 2024</p>
+      <div class="skill-card">
+        <h3>Analytics</h3>
+        <p>Data Interpretation, KPI Tracking</p>
+        <p>Tools- New Relic, Google Analytics, Google Search Console, Dareboost, Lighthouse </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Resume -->
-  <section id="resume" class="resume-section">
-    <h2>Resume</h2>
-    <a href="resume.pdf" download>Download Resume</a>
-  </section>
-
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title">Project Title</h2>
-      <img id="modal-image" src="" alt="Project Image" />
-      <p id="modal-description">Additional project details go here.</p>
-      <video id="modal-video" controls style="display:none;">
-        <source src="" type="video/mp4" />
-      </video>
+      <div class="skill-card">
+        <h3>Tech Stack</h3>
+        <p>HTML, CSS, JS</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Sheetal R More. All rights reserved.</p>
-    <p>
-      <a href="mailto:sheetalroman@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/sheetalrmore" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Sheetalrmore" target="_blank">GitHub</a>
-    </p>
-  </footer>
+<section id="projects" class="reveal">
+  <div class="container">
+    <h2>Professional Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card"><img src="images/clp.jpg">
+        <h3>Grad Planner</h3>
+        <p><strong>Role:</strong> Product Lead<br>
+        <strong>Tools:</strong> Python, ML, Tableau<br>
+        <strong>Impact:</strong> Automated course planning for universities</p>
+        <small>Published: April 2021</small>
+      </div>
+      <div class="project-card">
+        <h3>VR Compliance Training</h3>
+        <p><strong>Role:</strong> UX Strategist<br>
+        <strong>Tools:</strong> Figma, SurveyMonkey<br>
+        <strong>Impact:</strong> Improved training effectiveness through usability testing</p>
+        <small>Published: April 2021</small>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="resume" class="reveal">
+  <div class="container">
+    <h2>Resume</h2>
+    <p><a href="resume.pdf" download><button>Download Resume</button></a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Sheetal | Made with ❤️
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
