@@ -1,25 +1,22 @@
-// Smooth scroll for nav links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
+function openModal(id) {
+  document.getElementById("modal").style.display = "flex";
 
-// Scroll reveal animation
-const revealElements = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
-revealElements.forEach(el => observer.observe(el));
+  // Example dynamic content
+  if (id === "grad") {
+    document.getElementById("modal-title").textContent = "Grad Planner";
+    document.getElementById("modal-image").src = "grad-planner.jpg";
+    document.getElementById("modal-description").textContent = "Automated course planning for universities using ML and Tableau.";
+  } else if (id === "vr") {
+    document.getElementById("modal-title").textContent = "VR Compliance Training";
+    document.getElementById("modal-image").src = "vr-training.jpg";
+    document.getElementById("modal-description").textContent = "Improved training effectiveness through usability testing.";
+  } else if (id === "case1") {
+    document.getElementById("modal-title").textContent = "Case Study Title";
+    document.getElementById("modal-image").src = "case1.jpg";
+    document.getElementById("modal-description").textContent = "Placeholder for case study details.";
+  }
+}
 
-// Contact form feedback
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('Message sent! I’ll get back to you soon.');
-});
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
