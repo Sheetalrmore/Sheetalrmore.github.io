@@ -1,17 +1,51 @@
+// Open modal with dynamic content
 function openModal(id) {
-  document.getElementById("modal").style.display = "flex";
+  const modal = document.getElementById("modal");
+  const title = document.getElementById("modal-title");
+  const image = document.getElementById("modal-image");
+  const description = document.getElementById("modal-description");
+  const video = document.getElementById("modal-video");
 
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden"; // prevent background scroll
+
+  // Reset video
+  video.style.display = "none";
+  video.pause();
+
+  // Load content based on ID
   if (id === "grad") {
-    document.getElementById("modal-title").textContent = "Grad Planner";
-    document.getElementById("modal-image").src = "grad-planner.jpg";
-    document.getElementById("modal-description").textContent = "Automated course planning for universities using ML and Tableau.";
+    title.textContent = "Grad Planner";
+    image.src = "grad-planner.jpg";
+    description.textContent = "Automated course planning for universities using ML and Tableau.";
   } else if (id === "vr") {
-    document.getElementById("modal-title").textContent = "VR Compliance Training";
-    document.getElementById("modal-image").src = "vr-training.jpg";
-    document.getElementById("modal-description").textContent = "Improved training effectiveness through usability testing.";
+    title.textContent = "VR Compliance Training";
+    image.src = "vr-training.jpg";
+    description.textContent = "Improved training effectiveness through usability testing.";
   } else if (id === "case1") {
-    document.getElementById("modal-title").textContent = "Case Study Title";
-    document.getElementById("modal-image").src = "case1.jpg";
-    document
+    title.textContent = "Case Study Title";
+    image.src = "case1.jpg";
+    description.textContent = "Placeholder for case study details.";
   }
 }
+
+// Close modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+// Close modal on outside click
+window.onclick = function(event) {
+  const modal = document.getElementById("modal");
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+
+// Close modal on Escape key
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
