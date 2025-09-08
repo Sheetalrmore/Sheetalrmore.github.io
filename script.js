@@ -1,7 +1,6 @@
 function openModal(id) {
   document.getElementById("modal").style.display = "flex";
 
-  // Example dynamic content
   if (id === "grad") {
     document.getElementById("modal-title").textContent = "Grad Planner";
     document.getElementById("modal-image").src = "grad-planner.jpg";
@@ -13,10 +12,6 @@ function openModal(id) {
   } else if (id === "case1") {
     document.getElementById("modal-title").textContent = "Case Study Title";
     document.getElementById("modal-image").src = "case1.jpg";
-    document.getElementById("modal-description").textContent = "Placeholder for case study details.";
+    document
   }
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
 }
