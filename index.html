@@ -11,22 +11,46 @@
 
 <header>
   <div class="container">
-    <h1>Sheetal</h1>
-    <p class="tagline">Building programs that scale, empower, and transform.</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
     </nav>
+    <h1>Sheetal Roman</h1>
+    <p class="tagline">Managing complexity. Delivering clarity.</p>
   </div>
 </header>
 
 <section id="hero" class="reveal">
   <div class="container">
-    <h2>I specialise in managing cross-functional programs that drive operational efficiency and deliver strategic outcomes.</h2>
-    <p>My goal is to enable organisations to achieve measurable impact by delivering well-structured programs that align with business objectives, foster collaboration, and optimise resources.</p>
+    <h2> About Me </h2>
+    <p> I started my career as a design engineer, fresh out of engineering college—curious, hands-on, and eager to build. But I’ve always been drawn to the bigger picture: how processes work, why they matter, and how they impact people. That curiosity led me to pursue an MBA in Operations, and soon after, I found myself at an edtech startup, helping launch their new data science course. It was enriching to shape programs from scratch and enhance their operational efficiency. </p>
+    <p>From there, I stepped into the world of financial services, joining Bajaj Finserv. I led digital products end-to-end, learned the nuances of fintech, and curiously worked on solving real problems for real users. That experience inspired me to go deeper into product management, earning my CSPO certification and sharpening my skills in strategy, collaboration, and execution.</p>
+    <p>Today, I bring a blend of technical grounding, operational insight, and user empathy to every product I work on. I believe great products are built not just with data and design—but with purpose. Outside of work, I recharge by reading, traveling, and exploring new ideas that stretch my thinking.</p>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="container">
+    <h2>Professional Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-description="This project automated course planning for universities using Python, ML, and Tableau."><img src="images/clp.jpg">
+        <h3>Corporate Website Launch</h3>
+        <p>Published a full flegded corporate website of Bajaj Finserv and handled the entire product build single handedly which included complete information about all the subsidiaries including asset management, API integrations, asset migration on new domain etc alongwith the live production pages.</p>
+        <small>Published: April 2023</small>
+      </div>
+      <div class="project-card" data-description="This project automated course planning for universities using Python, ML, and Tableau."><img src="images/qr.jpg">
+        <h3>QR for retail store partners</h3>
+        <p> Delivered store location specific webpage via QR codes, to make EMI cards more easily accessible to the customers visiting the partner stores for buying Customer durables, and parallely show them daily offers available at that particular store where the QR is scanned.</p>
+        <small>Published: November 2023</small>
+      </div>
+      <div class="project-card" data-description="This project automated course planning for universities using Python, ML, and Tableau."><img src="images/gmb.jpg">
+        <h3>Google My Business</h3>
+        <p>Led Google My Business (GMB) strategy for listings and revamped GMB  microsites, increasing local discoverability of branches and enhancing user engagement on the platform. Handled SEO, IVR, headless API integrations, page performance etc for the listings. The scope was 6000+ BFL branches across India. </p>
+        <small>Published: November 2024</small>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -58,29 +82,7 @@
       </div>
       <div class="skill-card">
         <h3>Tech Stack</h3>
-        <p>HTML, CSS, JS</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="reveal">
-  <div class="container">
-    <h2>Professional Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card"><img src="images/clp.jpg">
-        <h3>Grad Planner</h3>
-        <p><strong>Role:</strong> Product Lead<br>
-        <strong>Tools:</strong> Python, ML, Tableau<br>
-        <strong>Impact:</strong> Automated course planning for universities</p>
-        <small>Published: April 2021</small>
-      </div>
-      <div class="project-card">
-        <h3>VR Compliance Training</h3>
-        <p><strong>Role:</strong> UX Strategist<br>
-        <strong>Tools:</strong> Figma, SurveyMonkey<br>
-        <strong>Impact:</strong> Improved training effectiveness through usability testing</p>
-        <small>Published: April 2021</small>
+        <p>HTML, CSS, JavaScript</p>
       </div>
     </div>
   </div>
@@ -89,14 +91,27 @@
 <section id="resume" class="reveal">
   <div class="container">
     <h2>Resume</h2>
-    <p><a href="resume.pdf" download><button>Download Resume</button></a></p>
+    <p><a href="images/Sheetal R- Resume.pdf" download><button>Download Resume</button></a></p>
   </div>
 </section>
 
 <footer>
   <div class="container">
-    <p>© 2025 Sheetal | Made with ❤️
+    <p>© 2025 Sheetal | Made with ❤️ 
+    &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/sheetal-roman" target="_blank" class="linkedin-button">
+        <img src="images/linkedin.jpg" alt="LinkedIn" class="linkedin-icon" />
+    </a>
+    </p>
 </footer>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

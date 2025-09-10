@@ -23,3 +23,36 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Message sent! I’ll get back to you soon.');
 });
+
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const title = card.querySelector("h3").textContent;
+    const description = card.getAttribute("data-description");
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    modal.style.display = "block";
+  });
+});
+
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = event => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("projectModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDescription = document.getElementById("modalDescription");
+  const closeBtn = document.querySelector(".close");
+})
